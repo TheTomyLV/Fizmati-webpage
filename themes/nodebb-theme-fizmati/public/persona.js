@@ -7,7 +7,6 @@ $(document).ready(function () {
 	setupMobileMenu();
 	configureNavbarHiding();
 
-	console.log("very ready")
 	window.addEventListener("scroll", (event) => {
 		document.getElementById("panel").style.setProperty('background-position-y', `-${window.scrollY*0.4}px`);
 	});

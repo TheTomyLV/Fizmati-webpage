@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-persona",
+	"id": "nodebb-theme-fizmati",
 	"hooks": [
 		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
 		{ "hook": "filter:config.get", "method": "getThemeConfig" },
@@ -17,5 +17,9 @@
 		"persona/mobile-menu.js": "public/modules/mobile-menu.js",
 		"../client/account/theme.js": "public/settings.js"
 	},
-	"languages": "languages"
+	"languages": "languages",
+	"staticDirs": {
+		"images": "static/images",
+		"fonts": "static/fonts"
+	  }
 }

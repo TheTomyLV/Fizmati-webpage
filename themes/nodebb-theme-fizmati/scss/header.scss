@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'FatboySlim';
+	font-style: normal;
+	font-weight: 300;
+	src: url('/plugins/nodebb-theme-fizmati/fonts/fbsbltc-webfont.woff2');
+  }
+
+.nav-link .fa {
+    color: #fe6601;
+}
+
 .header, .slideout-menu {
 	.notifications.dropdown, .chats.dropdown {
 		.dropdown-menu {
@@ -159,6 +170,11 @@
 				font-weight: 400;
 			}
 		}
+	}
+
+	.navbar-brand	{
+		color: #fe6601 !important;
+		font-family: FatboySlim !important;
 	}
 
 	.forum-logo {

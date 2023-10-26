@@ -44,6 +44,12 @@
 				<a href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}">{./title}</a>
 				{{{ end }}}
 			</h2>
+			<div class="text-content">
+				<p>{./postSummary}</p>
+				
+			</div>
+			<a href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}">Lasīt vairāk</a>
+
 			<div class="info">
 				<!-- IF !template.category -->
 				<div class="category-item d-inline-block">
@@ -76,39 +82,6 @@
 			<span title="{topics.votes}">{humanReadableNumber(topics.votes)}</span><br />
 			<small>[[global:votes]]</small>
 			<!-- END -->
-		</div>
-
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-postcount">
-			<span title="{topics.postcount}">{humanReadableNumber(topics.postcount)}</span><br />
-			<small>[[global:posts]]</small>
-		</div>
-
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-viewcount">
-			<span title="{topics.viewcount}">{humanReadableNumber(topics.viewcount)}</span><br />
-			<small>[[global:views]]</small>
-		</div>
-
-		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
-			<div class="lastpost background-link-container" style="border-color: {topics.category.bgColor}">
-				<a class="background-link" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"></a>
-				<!-- IF topics.unreplied -->
-				<p>
-					[[category:no_replies]]
-				</p>
-				<!-- ELSE -->
-				<!-- IF topics.teaser.pid -->
-				<p>
-					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{buildAvatar(topics.teaser.user, "24px", true, "not-responsive")}</a>
-					<a class="permalink text-muted" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
-					</a>
-				</p>
-				<div class="post-content">
-					{topics.teaser.content}
-				</div>
-				<!-- ENDIF topics.teaser.pid -->
-				<!-- ENDIF topics.unreplied -->
-			</div>
 		</div>
 	</li>
 	{{{end}}}

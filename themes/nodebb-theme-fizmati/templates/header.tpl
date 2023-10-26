@@ -31,7 +31,8 @@
 		<!-- IMPORT partials/chats-menu.tpl -->
 	</nav>
 
-	<main id="panel" class="slideout-panel" style="min-height: calc(100vh - 300px); background: url('uploads/system/background grid.svg');transition-duration: 0ms;">
+	<main id="panel" class="slideout-panel" style="min-height: calc(100vh); background: url('{config.relative_path}/plugins/nodebb-theme-fizmati/images/background grid.svg');transition-duration: 0ms; background-position-x: -50px">
+		<div style="backdrop-filter: blur(10px); min-height: 100vh;">
 		<nav class="navbar sticky-top navbar-expand-lg bg-light header border-bottom py-0" id="header-menu" component="navbar">
 			<div class="container justify-content-start flex-nowrap">
 				<!-- IMPORT partials/menu.tpl -->

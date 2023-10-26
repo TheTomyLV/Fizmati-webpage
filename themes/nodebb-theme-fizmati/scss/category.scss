@@ -114,6 +114,13 @@
 				display: inline-block;
 				@include user-icon-style(24px, 1.5rem, 50%);
 			}
+
+			.text-content {
+				max-height: 200px;
+				overflow: hidden;
+				-webkit-mask-image: linear-gradient(#000 60%, transparent);
+				mask-image: linear-gradient( #000 60%, transparent);
+			}
 		}
 
 		&:last-child li {
@@ -156,6 +163,8 @@
 	font-weight: normal;
 	line-height: 1.42857143;
 }
+
+
 
 
 

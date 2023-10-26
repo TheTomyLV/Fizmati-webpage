@@ -15,6 +15,7 @@ const helpers = require('./helpers');
 const utils = require('../utils');
 const translator = require('../translator');
 const analytics = require('../analytics');
+const posts = require('../posts');
 
 const categoryController = module.exports;
 
@@ -113,6 +114,14 @@ categoryController.get = async function (req, res, next) {
 				helpers.setCategoryTeaser(child);
 			}
 		});
+	}
+
+	if(categoryData.topics.length){
+		for(let i = 0;i<categoryData.topics.length;i++){
+			let mainPost = await posts.getPostsByPids([categoryData.topics[i].mainPid], categoryData.uid);
+			categoryData.topics[i].postSummary = mainPost[0].content;
+			console.log(categoryData.topics[i].postSummary)
+		}
 	}
 
 	categoryData.title = translator.escape(categoryData.name);
