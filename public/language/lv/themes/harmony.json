@@ -1,16 +1,17 @@
 {
 	"theme-name": "Harmony Theme",
 	"skins": "Skins",
-	"collapse": "Aizvērt",
-	"expand": "Atvērt",
-	"login-register-to-search": "Pieraksties vai reģistrējies, lai meklētu.",
-	"settings.title": "Theme iestatījumi",
-	"settings.enableQuickReply": "Ieslēgt ātro atbildi",
+	"collapse": "Collapse",
+	"expand": "Expand",
+	"login-register-to-search": "Login or register to search.",
+	"settings.title": "Theme settings",
+	"settings.enableQuickReply": "Enable quick reply",
 	"settings.centerHeaderElements": "Center header elements",
-	"settings.mobileTopicTeasers": "Rādīt tematu teasers telefonā",
-	"settings.stickyToolbar": "Lipīgā rīkjosla",
-	"settings.stickyToolbar.help": "Tēmu un kategoriju lapu rīkjosla tiks piestiprināta lapas augšpusē",
-	"settings.autohideBottombar": "Automātiski paslēpt apakšējo joslu",
-	"settings.autohideBottombar.help": "Apakšējā josla mobilajā skatā tiks paslēpta, kad lapa tiks ritināta uz leju",
-	"settings.chatModals": "Iespējot tērzēšanas modāļus"
+	"settings.mobileTopicTeasers": "Show topic teasers on mobile",
+	"settings.stickyToolbar": "Sticky toolbar",
+	"settings.stickyToolbar.help": "The toolbar on topic and category pages will stick to the top of the page",
+	"settings.autohideBottombar": "Auto hide bottom bar",
+	"settings.autohideBottombar.help": "The bottom bar on mobile view will be hidden when the page is scrolled down",
+	"settings.openSidebars": "Open sidebars",
+	"settings.chatModals": "Enable chat modals"
 }
