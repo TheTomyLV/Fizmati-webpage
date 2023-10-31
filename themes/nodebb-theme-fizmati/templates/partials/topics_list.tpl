@@ -1,36 +1,16 @@
 <ul component="category" class="topic-list" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
 	{{{each topics}}}
-	<li component="category/topic" class="row clearfix category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
+	<li component="category/topic" class="row clearfix category-item {function.generateTopicClass} border-bottom" <!-- IMPORT partials/data/category.tpl -->>
 		<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 		<meta itemprop="name" content="{function.stripTags, ../title}" />
 		<meta itemprop="itemListOrder" content="descending" />
 		<meta itemprop="position" content="{../index}" />
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
-		<div class="col-md-6 col-sm-9 col-10 content">
-			<div class="avatar float-start me-2">
-				<!-- IF showSelect -->
-				<div class="select" component="topic/select">
-					{{{ if ./thumbs.length }}}
-					<img src="{./thumbs.0.url}" class="user-img not-responsive" />
-					{{{ else }}}
-					{buildAvatar(../user, "48px", true, "not-responsive")}
-					{{{ end }}}
-					<i class="fa fa-check"></i>
-				</div>
-				<!-- ENDIF showSelect -->
-
-				<!-- IF !showSelect -->
-				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="float-start">
-					{{{ if ./thumbs.length }}}
-					<img src="{./thumbs.0.url}" class="user-img not-responsive" />
-					{{{ else }}}
-					{buildAvatar(../user, "48px", true, "not-responsive")}
-					{{{ end }}}
-				</a>
-				<!-- ENDIF !showSelect -->
-			</div>
-
+		<div class="col-md-12 col-sm-9 col-10 content">
+			{{{ if ./thumbs.length }}}
+				<img src="{./thumbs.0.url}" class="user-img not-responsive" />
+			{{{ end }}}
 			<h2 component="topic/header" class="title mb-1">
 				<i component="topic/scheduled" class="fa fa-clock-o {{{ if !topics.scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
 				<i component="topic/pinned" class="fa fa-thumb-tack {{{ if (topics.scheduled || !topics.pinned) }}}hidden{{{ end }}}" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
@@ -48,9 +28,10 @@
 				<p>{./postSummary}</p>
 				
 			</div>
-			<a href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}">Lasīt vairāk</a>
+			
 
 			<div class="info">
+				<a href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}">Lasīt vairāk</a>
 				<!-- IF !template.category -->
 				<div class="category-item d-inline-block">
 					{buildCategoryIcon(./category, "24px", "rounded-circle")}
@@ -71,17 +52,6 @@
 
 				<span class="visible-xs-inline timeago text-muted" title="{{{ if ./teaser.timestampISO }}}{./teaser.timestampISO}{{{ else }}}{./timestampISO}{{{ end }}}"></span>
 			</div>
-		</div>
-
-		<div class="mobile-stat col-2 visible-xs text-end">
-			<span>{humanReadableNumber(topics.postcount)}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-votes">
-			<!-- IF !reputation:disabled -->
-			<span title="{topics.votes}">{humanReadableNumber(topics.votes)}</span><br />
-			<small>[[global:votes]]</small>
-			<!-- END -->
 		</div>
 	</li>
 	{{{end}}}

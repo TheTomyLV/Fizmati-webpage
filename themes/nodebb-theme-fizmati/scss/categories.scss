@@ -18,16 +18,20 @@
 		.content {
 			padding: 10px 15px;
 
-			img, .user-icon {
+			.user-icon {
 				@include user-icon-style(46px, 2.4rem, 50%);
+			}
+			.user-img {
+				float:right;
+				height: 200px;
 			}
 
 			h2 {
 				display: block;
 				word-wrap: break-word;
-				overflow: hidden;
-				font-size: 18px;
+				font-size: 22px;
 				line-height: 22px;
+				font-weight: 600;
 			}
 		}
 

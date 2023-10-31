@@ -18,9 +18,9 @@
 			</div>
 
 			{{{ if config.searchEnabled }}}
-			<div class="navbar-search visible-xs">
+			<div class="navbar-search hidden">
 				<form action="{config.relative_path}/search" method="GET">
-					<button type="button" class="btn btn-link"><i class="fa fa-lg fa-fw fa-search" title="[[global:header.search]]"></i></button>
+					<button type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
 					<input autocomplete="off" type="text" class="form-control hidden" name="term" placeholder="[[global:search]]"/>
 					<button class="btn btn-primary hidden" type="submit"></button>
 					<input type="text" class="hidden" name="in" value="{config.searchDefaultInQuick}" />
@@ -102,14 +102,14 @@
 					{{{ if allowRegistration }}}
 					<li class="nav-item">
 						<a class="nav-link" href="{relative_path}/register">
-							<i class="fa fa-pencil fa-fw d-inline-block d-sm-none"></i>
+							<i class="fa fa-pencil fa-fw fa-solid"></i>
 							<span>[[global:register]]</span>
 						</a>
 					</li>
 					{{{ end }}}
 					<li class="nav-item">
 						<a class="nav-link" href="{relative_path}/login">
-							<i class="fa fa-sign-in fa-fw d-inline-block d-sm-none"></i>
+							<i class="fa fa-sign-in fa-fw fa-solid"></i>
 							<span>[[global:login]]</span>
 						</a>
 					</li>

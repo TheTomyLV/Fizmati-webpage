@@ -11,7 +11,7 @@
 		<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 flex-nowrap">
 			<div class="d-flex gap-1 align-items-stretch">
 				{{{ if privileges.topics:create }}}
-				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary text-nowrap" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
+				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary text-nowrap" data-ajaxify="false" role="button">[[category:new-topic-button]]</a>
 				{{{ end }}}
 
 				<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
@@ -29,7 +29,7 @@
 		{{{ if privileges.topics:create }}}
 		<hr class="visible-xs" />
 		<div class="alert alert-warning" id="category-no-topics">
-			[[category:no_topics]]
+			[[category:no-topics]]
 		</div>
 		{{{ end }}}
 		{{{ end }}}

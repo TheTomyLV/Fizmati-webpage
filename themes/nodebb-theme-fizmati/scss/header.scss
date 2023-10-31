@@ -5,9 +5,16 @@
 	src: url('/plugins/nodebb-theme-fizmati/fonts/fbsbltc-webfont.woff2');
   }
 
-.nav-link .fa {
+.nav-link .fa, .navbar-search .fa {
     color: #fe6601;
 }
+
+@media (max-width: 991.98px){
+	.navbar .navbar-search {
+		display: block!important;
+	}
+}
+
 
 .header, .slideout-menu {
 	.notifications.dropdown, .chats.dropdown {

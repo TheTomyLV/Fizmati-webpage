@@ -17,7 +17,6 @@
 		"persona/mobile-menu.js": "public/modules/mobile-menu.js",
 		"../client/account/theme.js": "public/settings.js"
 	},
-	"languages": "languages",
 	"staticDirs": {
 		"images": "static/images",
 		"fonts": "static/fonts"
